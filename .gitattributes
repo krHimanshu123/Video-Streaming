@@ -1,0 +1,54 @@
+# Normalize all text files to use LF
+* text=auto
+
+# Set line endings explicitly
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Treat these as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
+*.zip binary
+*.jar binary
+*.war binary
+
+# Node modules and build artifacts
+node_modules/** export-ignore
+build/** export-ignore
+dist/** export-ignore
+
+# Java build artifacts
+target/** export-ignore
+
+# Ignore environment config files when archiving
+.env export-ignore
+.env.* export-ignore
+application-dev.yml export-ignore
+application-test.yml export-ignore
+
+# Mark some files for Git LFS (optional)
+# If using Git LFS:
+# *.jar filter=lfs diff=lfs merge=lfs -text
+# *.png filter=lfs diff=lfs merge=lfs -text
+
+# Treat Java and JS/TS as text
+*.java text
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.html text
+*.css text
+*.scss text
+*.json text
+*.yml text
+*.yaml text
+*.md text
