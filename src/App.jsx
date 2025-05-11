@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import Login from './components/Auth/Login';
-import Signup from './components/Auth/signup';
+import Signup from './components/Auth/Signup';
 import Upload from './components/upload';
 import './App.css';
 
