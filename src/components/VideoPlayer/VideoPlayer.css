@@ -1,0 +1,174 @@
+/* src/components/VideoPlayer/VideoPlayer.css */
+
+.video-player-page {
+  max-width: 1000px; /* Reduced width for better layout */
+  margin: 20px auto;
+  /* background: #fff; */
+  padding: 20px;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smaller Video Player */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 50%; /* Smaller aspect ratio */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Hover effect to scale video slightly */
+.video-container:hover {
+  transform: scale(1.02);
+}
+
+/* Video Details */
+.video-details {
+  padding: 15px 0;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+/* Like and Action Buttons */
+.video-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f8f8f8;
+  transition: background 0.3s ease-in-out;
+}
+
+.likes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hover effect on action buttons */
+.likes button, 
+.video-actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #f2f2f2;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.likes button:hover, 
+.video-actions button:hover {
+  background: #065fd4;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Comments Section */
+.comments-section {
+  padding: 20px 0;
+}
+
+/* Comment Form */
+.comment-form {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease-in-out;
+}
+
+.comment-form input:focus {
+  border-color: #065fd4;
+  outline: none;
+}
+
+.comment-form button {
+  padding: 10px 18px;
+  background: #065fd4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.comment-form button:hover {
+  background: #003f91;
+  transform: scale(1.05);
+}
+
+/* Comments List */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual Comment */
+.comment {
+  padding: 12px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fafafa;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+
+.comment:hover {
+  background: #f1f1f1;
+}
+
+/* Comment Header */
+.comment-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Username Styling */
+.comment-user {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Timestamp Styling */
+.comment-time {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

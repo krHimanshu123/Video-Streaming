@@ -1,0 +1,384 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+/* Left section */
+.nav-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-button {
+  padding: 8px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #030303;
+  transition: background-color 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: #f2f2f2;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #030303;
+  letter-spacing: -0.5px;
+}
+
+.logo-text:first-letter {
+  color: #ff0000;
+}
+
+/* Center section */
+.nav-center {
+  flex: 2;
+  max-width: 800px;
+  padding: 0 16px;
+}
+
+.search-form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  height: 40px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+.search-form.focused {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 1px #1a73e8;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0 16px;
+  border: none;
+  border-radius: 24px 0 0 24px;
+  outline: none;
+  font-size: 1rem;
+  color: #030303;
+  background: #f9f9f9;
+}
+
+.search-form input::placeholder {
+  color: #606060;
+}
+
+.search-button {
+  width: 64px;
+  border: none;
+  background: #f8f8f8;
+  border-radius: 0 24px 24px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #030303;
+  transition: all 0.2s ease;
+}
+
+.search-button:hover {
+  background: #f0f0f0;
+  color: #1a73e8;
+}
+
+/* Right section */
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Common styles for nav items */
+.nav-item, .notification, .login-button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #030303;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-item, .notification {
+  width: 40px;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.nav-item:hover, .notification:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+/* Notification specific styles */
+.notification {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #ff0000;
+  color: white;
+  font-size: 11px;
+  padding: 2px 4px;
+  border-radius: 8px;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Login button specific styles */
+.login-button {
+  padding: 0 16px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  gap: 8px;
+  min-width: 100px;
+}
+
+.login-button:hover {
+  background: #1557b0;
+}
+
+/* Tooltips */
+.nav-item-label {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.nav-item:hover .nav-item-label,
+.notification:hover .nav-item-label {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Profile specific styles */
+.profile {
+  margin-left: 8px;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #606060;
+  transition: all 0.2s ease;
+}
+
+.profile:hover .profile-avatar {
+  background: #e5e5e5;
+}
+
+/* Sidebar styles */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: -240px;
+  width: 240px;
+  height: calc(100vh - 60px);
+  background: white;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-section {
+  padding: 12px 0;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: #e5e5e5;
+  margin: 4px 0;
+}
+
+.sidebar-heading {
+  padding: 8px 24px;
+  font-size: 1rem;
+  color: #606060;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  color: #030303;
+  text-decoration: none;
+  gap: 24px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background: #f2f2f2;
+}
+
+.sidebar-item span {
+  font-size: 0.95rem;
+}
+
+.sidebar-item.active {
+  background: #e5e5e5;
+  font-weight: 500;
+}
+
+/* Sidebar scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+  .main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+
+  .sidebar.open + .main-content {
+    margin-left: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-item-label {
+    display: none;
+  }
+  
+  .nav-center {
+    padding: 0 8px;
+  }
+  
+  .search-form {
+    max-width: 100%;
+  }
+  
+  .sidebar {
+    width: 240px;
+    left: -240px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+  
+  .login-button {
+    padding: 0 12px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .nav-right {
+    gap: 4px;
+  }
+  
+  .nav-item, .notification {
+    padding: 6px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .login-button {
+    height: 36px;
+    padding: 0 10px;
+    min-width: 70px;
+  }
+}
