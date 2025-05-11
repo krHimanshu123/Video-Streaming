@@ -6,7 +6,7 @@ import Home from './components/Home/Home';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
-import Upload from './components/upload';
+import upload from './components/upload';
 import './App.css';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             
             <Route path="/video/:id" element={<VideoPlayer />} />
-            <Route path="/upload" element={<Upload />} />
+            <Route path="/upload" element={<upload />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
