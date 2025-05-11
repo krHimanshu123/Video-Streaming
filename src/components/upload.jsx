@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Upload.css';
+import './upload.css';
 
 function Upload() {
   const navigate = useNavigate();
