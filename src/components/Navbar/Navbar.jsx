@@ -93,7 +93,7 @@ function Navbar() {
         className={`sidebar-overlay ${isSidebarOpen ? 'active' : ''}`}
         onClick={toggleSidebar}
       ></div>
-
+      
 <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-section">
           <Link to="/" className="sidebar-item">
@@ -111,7 +111,7 @@ function Navbar() {
         </div>
 
         <div className="sidebar-divider"></div>
-
+  
         <div className="sidebar-section">
           <Link to="/library" className="sidebar-item">
             <PlaySquare size={20} />
