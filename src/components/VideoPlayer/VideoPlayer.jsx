@@ -127,6 +127,7 @@ function VideoPlayer() {
     }
   };
 
+  
   return (
     <div className="video-player-page">
       <div className="video-container">
