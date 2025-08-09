@@ -51,6 +51,7 @@ function Upload() {
     setError('');
     setIsLoading(true);
 
+    
     if (!videoDetails.title || !videoDetails.videoFile || !videoDetails.thumbnail || !videoDetails.duration) {
       setError('Please fill in all required fields.');
       setIsLoading(false);
