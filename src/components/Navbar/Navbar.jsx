@@ -41,6 +41,7 @@ function Navbar() {
           </Link>
         </div>
 
+        
         <div className="nav-center">
           <form 
             onSubmit={handleSearch} 
