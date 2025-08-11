@@ -105,6 +105,7 @@ function VideoPlayer() {
     },
   ];
 
+  
   useEffect(() => {
     // Find the video data based on the ID
     const video = mockVideos.find(v => v.id === parseInt(id));
