@@ -13,6 +13,7 @@ function Signup() {
     text: '',
     type: '' // 'success' or 'error'
   });
+  
   const navigate = useNavigate();
 
   const handleChange = (e) => {
