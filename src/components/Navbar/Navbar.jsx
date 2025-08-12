@@ -22,6 +22,7 @@ function Navbar() {
     document.body.style.overflow = isSidebarOpen ? 'auto' : 'hidden';
   };
 
+  
   const handleAuthClick = () => {
     if (!isLoggedIn) {
       navigate('/login');
