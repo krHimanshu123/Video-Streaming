@@ -11,7 +11,6 @@ function Home() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const navigate = useNavigate();
 
-
   
   useEffect(() => {
     try {
