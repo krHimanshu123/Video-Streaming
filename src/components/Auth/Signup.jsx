@@ -14,6 +14,7 @@ function Signup() {
     type: '' // 'success' or 'error'
   });
 
+
   
   const navigate = useNavigate();
 
