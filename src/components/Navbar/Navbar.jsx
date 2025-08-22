@@ -17,6 +17,7 @@ function Navbar() {
     }
   };
 
+  
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
     document.body.style.overflow = isSidebarOpen ? 'auto' : 'hidden';
