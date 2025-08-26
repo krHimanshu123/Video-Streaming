@@ -4,7 +4,6 @@ A modern, responsive Video Streaming application built with **React** and **Vite
 
 ---
 
-
 ## Features
 
 - 🚀 **Powered by Vite:** Lightning-fast build and HMR for instant feedback.
