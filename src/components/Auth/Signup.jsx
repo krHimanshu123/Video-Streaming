@@ -15,7 +15,6 @@ function Signup() {
   });
 
 
-  
   const navigate = useNavigate();
 
   const handleChange = (e) => {
