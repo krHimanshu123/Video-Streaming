@@ -10,7 +10,6 @@ function VideoPlayer() {
   const [newComment, setNewComment] = useState('');
   const [videoData, setVideoData] = useState(null);
 
-  
   // Mock video data (in a real app, this could come from an API)
   const mockVideos = [
     {
