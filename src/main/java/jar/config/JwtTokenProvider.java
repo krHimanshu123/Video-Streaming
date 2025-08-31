@@ -4,7 +4,6 @@ import jar.model.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import java.util.Date;
-
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
