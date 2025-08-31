@@ -15,6 +15,7 @@ function Upload() {
     views: '0'
   });
 
+  
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [uploadStage, setUploadStage] = useState('details');
