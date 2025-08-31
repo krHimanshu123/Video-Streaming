@@ -19,6 +19,7 @@ public class UserDetailsImpl implements UserDetails {
         this.authorities = authorities;
     }
 
+    
     @Override
     public Collection<SimpleGrantedAuthority> getAuthorities() {
         return authorities;
