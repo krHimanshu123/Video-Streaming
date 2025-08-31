@@ -9,6 +9,7 @@ import jar.model.Role;
 import jar.repository.RoleRepository;
 import jar.repository.UserRepository;
 
+
 @Component
 public class DatabaseInitializer implements CommandLineRunner {
 
