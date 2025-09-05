@@ -14,7 +14,6 @@ function Upload() {
     duration: '',
     views: '0'
   });
-
   
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
