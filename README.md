@@ -2,6 +2,7 @@
 
 A modern, responsive Video Streaming application built with **React** and **Vite**. This template provides a professional foundation for scalable web apps featuring fast development, premium icon integration, and a user-friendly interface. Hot Module Replacement (HMR) and ESLint rules are included for an efficient developer experience. 
 
+
 ---
 
 ## Features
