@@ -5,6 +5,7 @@
 *.sh text eol=lf
 *.bat text eol=crlf
 
+
 # Treat these as binary
 *.png binary
 *.jpg binary
