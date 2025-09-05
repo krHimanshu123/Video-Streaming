@@ -17,7 +17,6 @@ function Navbar() {
     }
   };
 
-
   
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
