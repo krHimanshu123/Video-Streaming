@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Bell, Search, Upload, User, Menu, Home, Compass, Clock, ThumbsUp, PlaySquare, History, Clapperboard, Gamepad, Music2, Trophy, Newspaper } from 'lucide-react';
 import './Navbar.css';
-
 function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
