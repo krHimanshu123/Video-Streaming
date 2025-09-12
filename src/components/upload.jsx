@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './upload.css';
 
+
 function Upload() {
   const navigate = useNavigate();
   const [videoDetails, setVideoDetails] = useState({
