@@ -19,8 +19,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-
-            
+       
             <Route path="/video/:id" element={<VideoPlayer />} />
             <Route path="/upload" element={<upload />} />
             <Route path="/login" element={<Login />} />
