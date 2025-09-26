@@ -29,6 +29,7 @@ function Home() {
     }
   }, []);
 
+  
   useEffect(() => {
     // Filter videos based on selected category
     if (selectedCategory === 'All') {
