@@ -35,6 +35,7 @@ public class UserDetailsImpl implements UserDetails {
         return email;
     }
 
+    
     @Override
     public boolean isAccountNonExpired() {
         return true; // Return true if account expiration is not a concern
