@@ -44,6 +44,7 @@ public class JwtUtils {
         return Keys.hmacShaKeyFor(jwtSecret.getBytes(StandardCharsets.UTF_8));
     }
 
+
     // Extract username from JWT token
     public String getUserNameFromJwtToken(String token) {
         return Jwts.parserBuilder()
