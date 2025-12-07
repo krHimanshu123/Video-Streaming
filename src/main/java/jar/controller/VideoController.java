@@ -37,6 +37,7 @@ public class VideoController {
             @RequestParam(value = "tags", required = false) List<String> tags,
             @RequestParam("creator") String creator
     ) {
+        
         try {
             // Save the video using the service
             Video savedVideo = videoService.saveVideo(
